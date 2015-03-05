@@ -3,7 +3,7 @@ package main
 import (
 	//	"encoding/json"
 	"fmt"
-	"github.com/squeegy06/goChatServer/objects"
+	"github.com/squeegy06/go-chat-server/objects"
 	"net/http"
 )
 
