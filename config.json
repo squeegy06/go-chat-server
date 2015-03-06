@@ -1,0 +1,10 @@
+{
+	"database":
+		{
+			"host": "localhost",
+			"user": "root",
+			"pass": "password",
+			"database": "goChatServer",
+			"port": "3306"
+		}
+}
