@@ -5,14 +5,22 @@ import (
 	"fmt"
 	"github.com/squeegy06/go-chat-server/objects"
 	"net/http"
+	"os"
 )
 
 func main() {
 	//	http.HandleFunc("/say/", handleSay)
-	http.HandleFunc("/", handleRequest)
-	err := http.ListenAndServe(":8080", nil)
+	err := objects.Bootstrap()
 	if err != nil {
-		fmt.Printf("Error")
+		panic(err.Error())
+		os.Exit(1)
+	}
+
+	http.HandleFunc("/", handleRequest)
+	err = http.ListenAndServe(":8080", nil)
+	if err != nil {
+		panic(err.Error())
+		os.Exit(1)
 	}
 }
 
